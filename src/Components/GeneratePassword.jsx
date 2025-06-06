@@ -51,13 +51,7 @@ const GeneratePassword = () => {
           onClick={copyPasswordToClipboard}
           className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'
         >
-          <img
-            style={{ marginRight: '5px', display: 'inline-block' }} // Adjust the margin as needed
-            width='24'
-            height='24'
-            src='https://img.icons8.com/material/24/copy--v1.png'
-            alt='copy--v1'
-          />
+          <FontAwesomeIcon icon={faCopy} className='mr-1' />
           {iscopy ? 'Copied' : 'Copy'}
         </button>
       </div>
