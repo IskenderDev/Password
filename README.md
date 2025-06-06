@@ -61,11 +61,10 @@ If you'd like to contribute, please follow these steps:
 
 ## Contact
 
-[PawanSirsat]
-[p1.sirsat1998@gmail.com]
+PawanSirsat
+p1.sirsat1998@gmail.com
 
 Feel free to reach out with any questions, issues, or suggestions!
 
 ---
 
-Feel free to customize it based on your project's specifics. Add sections or details that are relevant to your project. Ensure to replace placeholders like `[Project Name]`, `[Your License]`, and `[Your Name]` with actual information.
