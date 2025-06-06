@@ -1,7 +1,5 @@
 import { useState, useCallback, useEffect, useRef } from 'react'
 import { setGeneratedPassword, getGeneratedPassword } from './data'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCopy } from '@fortawesome/free-solid-svg-icons'
 
 const GeneratePassword = () => {
   const [length, setLength] = useState(8)

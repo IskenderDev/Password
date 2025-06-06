@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
-import { getGeneratedPassword, getNewPassword } from './data'
+import { getNewPassword } from './data'
 import WebsiteList from './WebsiteList'
 
 const SavedPasswords = () => {

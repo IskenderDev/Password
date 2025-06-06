@@ -1,4 +1,5 @@
-import React from 'react'
+
+import PropTypes from 'prop-types'
 
 const WebsiteList = ({ websites, onDelete }) => {
   const handleDelete = (index) => {
@@ -16,7 +17,7 @@ const WebsiteList = ({ websites, onDelete }) => {
           >
             <img
               src={`https://www.${website.website}.com/favicon.ico`}
-              alt=''
+              alt={`${website.website} favicon`}
               onError={(e) => {
                 e.target.src =
                   'https://img.icons8.com/color/48/internet--v1.png'
@@ -27,6 +28,7 @@ const WebsiteList = ({ websites, onDelete }) => {
               <a
                 href={`http://www.${website.website}.com`}
                 target='_blank'
+                rel='noopener noreferrer'
                 className='text-blue-500 hover:underline'
               >
                 {`www.${website.website}.com`}
@@ -49,6 +51,11 @@ const WebsiteList = ({ websites, onDelete }) => {
       </ul>
     </div>
   )
+}
+
+WebsiteList.propTypes = {
+  websites: PropTypes.array.isRequired,
+  onDelete: PropTypes.func.isRequired,
 }
 
 export default WebsiteList
