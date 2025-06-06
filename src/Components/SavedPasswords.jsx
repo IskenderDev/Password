@@ -10,6 +10,7 @@ const SavedPasswords = () => {
   const [password, setPassword] = useState(getNewPassword())
   const [passwordVisible, setPasswordVisible] = useState(false)
   const [passwords, setPasswords] = useState([])
+  const [query, setQuery] = useState('')
 
   useEffect(() => {
     const storedPasswords = JSON.parse(localStorage.getItem('passwords')) || []
@@ -63,9 +64,22 @@ const SavedPasswords = () => {
     setPassword(getNewPassword()) // Reset the password after submission
   }
 
+  const filteredPasswords = passwords.filter(
+    (item) =>
+      item.website.toLowerCase().includes(query.toLowerCase()) ||
+      item.username.toLowerCase().includes(query.toLowerCase())
+  )
+
   return (
     <>
       <div className='w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-800 text-orange-500'>
+        <input
+          type='text'
+          placeholder='Search by website or username'
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          className='w-full p-2 mb-4 border rounded'
+        />
         <h2 className='text-2xl font-bold mb-4 text-blue-500'>Save Password</h2>
 
         <form onSubmit={handleSubmit}>
@@ -108,7 +122,7 @@ const SavedPasswords = () => {
           </button>
         </form>
 
-        {<WebsiteList websites={passwords} onDelete={handleDelete} />}
+        {<WebsiteList websites={filteredPasswords} onDelete={handleDelete} searchTerm={query} />}
       </div>
     </>
   )
