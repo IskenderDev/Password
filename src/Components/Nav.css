@@ -1,12 +1,12 @@
 .activenav {
-  display: flex;
+  display: inline-flex;
   box-shadow: 0 0 0.5rem #6f6f70;
   border-radius: 10px;
 }
 
 .navbar__li-box {
   width: 200px;
-  display: flex;
+  display: inline-flex;
   height: 32px;
   padding: 4px;
   text-align: center;

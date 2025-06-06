@@ -1,22 +1,15 @@
-import React from 'react'
 import {
   BrowserRouter as Router,
   Route,
-  Link,
+  NavLink,
   Routes,
   Navigate,
 } from 'react-router-dom'
 import GeneratePassword from './Components/GeneratePassword'
 import SavedPasswords from './Components/SavedPasswords'
-import { useState } from 'react'
 import './Components/Nav.css'
 
 const App = () => {
-  const [currentPage, setCurrentPage] = useState('/generate-password')
-
-  const handleNavItemClick = (page) => {
-    setCurrentPage(page)
-  }
 
   return (
     <Router>
@@ -26,22 +19,22 @@ const App = () => {
           <h1 className='text-xl font-bold mr-4 text-blue-600'>
             Password Manager
           </h1>
-          <div
-            className={` ${
-              currentPage === '/generate-password' ? 'activenav' : ''
-            } navbar__li-box inline`}
-            onClick={() => handleNavItemClick('/generate-password')}
+          <NavLink
+            to='/generate-password'
+            className={({ isActive }) =>
+              isActive ? 'activenav navbar__li-box inline' : 'navbar__li-box inline'
+            }
           >
-            <Link to='/generate-password'>Generate</Link>
-          </div>
-          <div
-            className={` ${
-              currentPage === '/saved-passwords' ? 'activenav' : ''
-            } navbar__li-box inline`}
-            onClick={() => handleNavItemClick('/saved-passwords')}
+            Generate
+          </NavLink>
+          <NavLink
+            to='/saved-passwords'
+            className={({ isActive }) =>
+              isActive ? 'activenav navbar__li-box inline' : 'navbar__li-box inline'
+            }
           >
-            <Link to='/saved-passwords'>Saved</Link>
-          </div>
+            Saved
+          </NavLink>
         </nav>
 
         {/* Main Content */}
