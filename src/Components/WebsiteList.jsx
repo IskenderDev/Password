@@ -1,8 +1,22 @@
 import React from 'react'
 
-const WebsiteList = ({ websites, onDelete }) => {
+const WebsiteList = ({ websites, onDelete, searchTerm }) => {
   const handleDelete = (index) => {
     onDelete(index)
+  }
+
+  const highlight = (text) => {
+    if (!searchTerm) return text
+    const regex = new RegExp(`(${searchTerm})`, 'gi')
+    return text.split(regex).map((part, idx) =>
+      regex.test(part) ? (
+        <mark key={idx} className='bg-yellow-200'>
+          {part}
+        </mark>
+      ) : (
+        part
+      )
+    )
   }
 
   return (
@@ -27,13 +41,14 @@ const WebsiteList = ({ websites, onDelete }) => {
               <a
                 href={`http://www.${website.website}.com`}
                 target='_blank'
+                rel='noreferrer'
                 className='text-blue-500 hover:underline'
               >
-                {`www.${website.website}.com`}
+                {highlight(`www.${website.website}.com`)}
               </a>
 
               <div className='text-gray-500 text-sm'>
-                Username: {website.username}
+                Username: {highlight(website.username)}
                 <br />
                 Password: {website.password}
               </div>
