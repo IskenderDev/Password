@@ -1,0 +1,19 @@
+.activenav {
+  display: flex;
+  box-shadow: 0 0 0.5rem #6f6f70;
+  border-radius: 10px;
+}
+
+.navbar__li-box {
+  width: 200px;
+  display: flex;
+  height: 32px;
+  padding: 4px;
+  text-align: center;
+  margin-top: 5px;
+  transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+.navbar__li-box:hover {
+  border-left: 2px solid borderLeftColor;
+  cursor: pointer;
+}
