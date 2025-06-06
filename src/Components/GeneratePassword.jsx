@@ -34,22 +34,22 @@ const GeneratePassword = () => {
   //Save In Local Storage for
 
   return (
-    <div className='w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-800 text-orange-500'>
-      <h2 className='text-2xl font-bold mb-4 text-blue-500'>
+    <div className='w-full max-w-md mx-auto shadow-lg rounded-md px-6 py-4 my-8 bg-gray-800 text-gray-200'>
+      <h2 className='text-2xl font-semibold mb-4 text-blue-400'>
         Generate Password
       </h2>
       <div className='flex shadow rounded-lg overflow-hidden mb-4'>
         <input
           type='text'
           value={password}
-          className='outline-none w-full py-1 px-3'
+          className='outline-none w-full py-2 px-3 rounded-l-md bg-gray-700 text-white'
           placeholder='Password'
           readOnly
           ref={passwordRef}
         />
         <button
           onClick={copyPasswordToClipboard}
-          className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'
+          className='outline-none bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 shrink-0 rounded-r-md'
         >
           <FontAwesomeIcon icon={faCopy} className='mr-1' />
           {iscopy ? 'Copied' : 'Copy'}
@@ -93,7 +93,7 @@ const GeneratePassword = () => {
         </div>
         <button
           type='button'
-          className='w-full p-2 bg-green-500 text-white rounded cursor-pointer hover:bg-green-500'
+          className='w-full p-2 bg-green-600 hover:bg-green-700 text-white rounded-md cursor-pointer'
           onClick={passwordGenerator}
         >
           Generate
