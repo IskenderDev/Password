@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
-import { getGeneratedPassword, getNewPassword } from './data'
+import { getNewPassword } from './data'
 import WebsiteList from './WebsiteList'
 
 const SavedPasswords = () => {
@@ -72,7 +72,7 @@ const SavedPasswords = () => {
 
   return (
     <>
-      <div className='w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-800 text-orange-500'>
+      <div className='w-full max-w-md mx-auto shadow-md rounded-lg px-6 py-4 my-8 bg-gray-800 text-gray-100'>
         <input
           type='text'
           placeholder='Search by website or username'
@@ -80,7 +80,7 @@ const SavedPasswords = () => {
           onChange={(e) => setQuery(e.target.value)}
           className='w-full p-2 mb-4 border rounded'
         />
-        <h2 className='text-2xl font-bold mb-4 text-blue-500'>Save Password</h2>
+        <h2>Save Password</h2>
 
         <form onSubmit={handleSubmit}>
           <input
@@ -116,7 +116,7 @@ const SavedPasswords = () => {
 
           <button
             type='submit'
-            className='w-full p-2 bg-green-500 text-white rounded cursor-pointer'
+            className='w-full p-2 bg-green-500 text-white rounded cursor-pointer transition-colors duration-300 hover:bg-green-600'
           >
             Save Password
           </button>

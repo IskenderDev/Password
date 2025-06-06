@@ -34,10 +34,8 @@ const GeneratePassword = () => {
   //Save In Local Storage for
 
   return (
-    <div className='w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-800 text-orange-500'>
-      <h2 className='text-2xl font-bold mb-4 text-blue-500'>
-        Generate Password
-      </h2>
+    <div className='w-full max-w-md mx-auto shadow-md rounded-lg px-6 py-4 my-8 bg-gray-800 text-gray-100'>
+      <h2>Generate Password</h2>
       <div className='flex shadow rounded-lg overflow-hidden mb-4'>
         <input
           type='text'
@@ -49,7 +47,7 @@ const GeneratePassword = () => {
         />
         <button
           onClick={copyPasswordToClipboard}
-          className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'
+          className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0 transition-colors duration-300 hover:bg-blue-600'
         >
           <FontAwesomeIcon icon={faCopy} className='mr-1' />
           {iscopy ? 'Copied' : 'Copy'}
@@ -93,7 +91,7 @@ const GeneratePassword = () => {
         </div>
         <button
           type='button'
-          className='w-full p-2 bg-green-500 text-white rounded cursor-pointer hover:bg-green-500'
+          className='w-full p-2 bg-green-500 text-white rounded cursor-pointer transition-colors duration-300 hover:bg-green-600'
           onClick={passwordGenerator}
         >
           Generate

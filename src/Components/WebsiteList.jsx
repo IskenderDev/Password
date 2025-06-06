@@ -1,4 +1,4 @@
-import React from 'react'
+/* eslint-disable react/prop-types */
 
 const WebsiteList = ({ websites, onDelete, searchTerm }) => {
   const handleDelete = (index) => {
@@ -20,8 +20,8 @@ const WebsiteList = ({ websites, onDelete, searchTerm }) => {
   }
 
   return (
-    <div className='max-w-2xl mx-auto p-4'>
-      <h1 className='text-3xl font-bold mb-4'>Website List</h1>
+    <div className='max-w-2xl mx-auto p-4 text-gray-100'>
+      <h1>Website List</h1>
       <ul className='space-y-4'>
         {websites.map((website, index) => (
           <li
@@ -55,7 +55,7 @@ const WebsiteList = ({ websites, onDelete, searchTerm }) => {
             </div>
             <button
               onClick={() => handleDelete(index)}
-              className='absolute top-0 right-0 text-red-500 hover:text-red-700 cursor-pointer'
+              className='absolute top-0 right-0 text-red-500 hover:text-red-700 cursor-pointer transition-colors duration-300'
             >
               Delete
             </button>

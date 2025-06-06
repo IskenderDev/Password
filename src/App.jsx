@@ -1,4 +1,3 @@
-import React from 'react'
 import {
   BrowserRouter as Router,
   Route,
@@ -32,7 +31,12 @@ const App = () => {
             } navbar__li-box inline`}
             onClick={() => handleNavItemClick('/generate-password')}
           >
-            <Link to='/generate-password'>Generate</Link>
+            <Link
+              to='/generate-password'
+              className='px-2 transition-colors duration-300 hover:text-blue-400'
+            >
+              Generate
+            </Link>
           </div>
           <div
             className={` ${
@@ -40,12 +44,17 @@ const App = () => {
             } navbar__li-box inline`}
             onClick={() => handleNavItemClick('/saved-passwords')}
           >
-            <Link to='/saved-passwords'>Saved</Link>
+            <Link
+              to='/saved-passwords'
+              className='px-2 transition-colors duration-300 hover:text-blue-400'
+            >
+              Saved
+            </Link>
           </div>
         </nav>
 
         {/* Main Content */}
-        <div className='p-4'>
+        <div className='p-6'>
           {/* Route Configuration */}
           <Routes>
             <Route path='/generate-password' element={<GeneratePassword />} />
