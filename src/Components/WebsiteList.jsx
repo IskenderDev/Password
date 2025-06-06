@@ -21,12 +21,12 @@ const WebsiteList = ({ websites, onDelete, searchTerm }) => {
 
   return (
     <div className='max-w-2xl mx-auto p-4'>
-      <h1 className='text-3xl font-bold mb-4'>Website List</h1>
+      <h1 className='text-3xl font-semibold mb-4 text-blue-400'>Website List</h1>
       <ul className='space-y-4'>
         {websites.map((website, index) => (
           <li
             key={index}
-            className='flex items-center space-x-4 border-b pb-2 relative'
+            className='flex items-center space-x-4 border-b border-gray-700 pb-2 relative bg-gray-800 rounded-md p-2'
           >
             <img
               src={`https://www.${website.website}.com/favicon.ico`}
@@ -55,7 +55,7 @@ const WebsiteList = ({ websites, onDelete, searchTerm }) => {
             </div>
             <button
               onClick={() => handleDelete(index)}
-              className='absolute top-0 right-0 text-red-500 hover:text-red-700 cursor-pointer'
+              className='absolute top-0 right-0 text-red-400 hover:text-red-600 cursor-pointer'
             >
               Delete
             </button>
