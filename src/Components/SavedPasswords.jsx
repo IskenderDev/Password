@@ -41,7 +41,7 @@ const SavedPasswords = () => {
     e.preventDefault()
 
     if (!website || !password) {
-      alert('Please enter both website and password.')
+      alert('Пожалуйста, введите сайт и пароль.')
       return
     }
     const cleanedInput = cleanDomain(website)
@@ -66,12 +66,12 @@ const SavedPasswords = () => {
   return (
     <>
       <div className='w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-800 text-orange-500'>
-        <h2 className='text-2xl font-bold mb-4 text-blue-500'>Save Password</h2>
+        <h2 className='text-2xl font-bold mb-4 text-blue-500'>Сохранить пароль</h2>
 
         <form onSubmit={handleSubmit}>
           <input
             type='text'
-            placeholder='Enter website'
+            placeholder='Введите сайт'
             value={website}
             onChange={(e) => setWebsite(e.target.value)}
             className='w-full p-2 mb-2 border rounded'
@@ -79,7 +79,7 @@ const SavedPasswords = () => {
 
           <input
             type='text'
-            placeholder='Enter Username'
+            placeholder='Введите имя пользователя'
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             className='w-full p-2 mb-2 border rounded'
@@ -87,7 +87,7 @@ const SavedPasswords = () => {
           <div className='relative'>
             <input
               type={passwordVisible ? 'text' : 'password'}
-              placeholder='Enter password'
+              placeholder='Введите пароль'
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className='w-full p-2 mb-2 border rounded'
@@ -104,7 +104,7 @@ const SavedPasswords = () => {
             type='submit'
             className='w-full p-2 bg-green-500 text-white rounded cursor-pointer'
           >
-            Save Password
+            Сохранить пароль
           </button>
         </form>
 

@@ -36,14 +36,14 @@ const GeneratePassword = () => {
   return (
     <div className='w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-800 text-orange-500'>
       <h2 className='text-2xl font-bold mb-4 text-blue-500'>
-        Generate Password
+        Создать пароль
       </h2>
       <div className='flex shadow rounded-lg overflow-hidden mb-4'>
         <input
           type='text'
           value={password}
           className='outline-none w-full py-1 px-3'
-          placeholder='Password'
+          placeholder='Пароль'
           readOnly
           ref={passwordRef}
         />
@@ -58,7 +58,7 @@ const GeneratePassword = () => {
             src='https://img.icons8.com/material/24/copy--v1.png'
             alt='copy--v1'
           />
-          {iscopy ? 'Copied' : 'Copy'}
+          {iscopy ? 'Скопировано' : 'Копировать'}
         </button>
       </div>
       <div className='flex text-sm gap-x-2 '>
@@ -73,7 +73,7 @@ const GeneratePassword = () => {
               setLength(e.target.value)
             }}
           />
-          <label>Length: {length}</label>
+            <label>Длина: {length}</label>
         </div>
         <div className='flex items-center gap-x-1'>
           <input
@@ -84,7 +84,7 @@ const GeneratePassword = () => {
               setNumberAllowed((prev) => !prev)
             }}
           />
-          <label htmlFor='numberInput'>Numbers</label>
+            <label htmlFor='numberInput'>Цифры</label>
         </div>
         <div className='flex items-center gap-x-1'>
           <input
@@ -95,14 +95,14 @@ const GeneratePassword = () => {
               setCharAllowed((prev) => !prev)
             }}
           />
-          <label htmlFor='characterInput'>Symbols</label>
+            <label htmlFor='characterInput'>Символы</label>
         </div>
         <button
           type='button'
           className='w-full p-2 bg-green-500 text-white rounded cursor-pointer hover:bg-green-500'
           onClick={passwordGenerator}
         >
-          Generate
+          Создать
         </button>
       </div>
       <br></br>

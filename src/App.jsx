@@ -24,7 +24,7 @@ const App = () => {
         {/* Top Navbar */}
         <nav className='bg-gray-800 text-white p-4 flex'>
           <h1 className='text-xl font-bold mr-4 text-blue-600'>
-            Password Manager
+            Менеджер паролей
           </h1>
           <div
             className={` ${
@@ -32,7 +32,7 @@ const App = () => {
             } navbar__li-box inline`}
             onClick={() => handleNavItemClick('/generate-password')}
           >
-            <Link to='/generate-password'>Generate</Link>
+            <Link to='/generate-password'>Создать</Link>
           </div>
           <div
             className={` ${
@@ -40,7 +40,7 @@ const App = () => {
             } navbar__li-box inline`}
             onClick={() => handleNavItemClick('/saved-passwords')}
           >
-            <Link to='/saved-passwords'>Saved</Link>
+            <Link to='/saved-passwords'>Сохранённые</Link>
           </div>
         </nav>
 
